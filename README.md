@@ -1,5 +1,10 @@
 # Puppet ScyllaDB
 
+<<<<<<< HEAD
+=======
+[![Build Status](https://travis-ci.org/yakirgb/puppet-scylladb.svg?branch=master)](https://travis-ci.org/yakirgb/puppet-scylladb)
+
+>>>>>>> origin/master
 This role installs and configures ScyllaDB cluster.
 
 ## Tested with Travis CI
@@ -18,7 +23,7 @@ Platform requirements are listed in the metadata file.
 
 ```puppet
 class{ 'scylla':
-  dc    =>  'ScyllaIL',
+  dc    =>  'ScyllaTest',
 }
 ```
 ## License
