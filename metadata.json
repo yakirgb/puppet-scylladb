@@ -1,0 +1,26 @@
+{
+  "name": "yakirgb-scylladb",
+  "version": "0.1.0",
+  "author": "Yakir Gibraltar",
+  "summary": "Scylla installation and configuration",
+  "license": "MIT",
+  "source": "https://github.com/yakirgb/puppet-scylladb",
+  "project_page": "https://github.com/yakirgb/puppet-scylladb",
+  "issues_url": "https://github.com/yakirgb/puppet-scylladb/issues",
+  "description": "Scylla installation and configuration",
+  "dependencies": [],
+  "tags": [
+  "scylla",
+  "scylladb"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem":  "RedHat",
+      "operatingsystemrelease": [ "7" ]
+    },
+    {
+      "operatingsystem":  "CentOS",
+      "operatingsystemrelease": [ "7" ]
+    }
+  ]
+}
