@@ -1,26 +1,19 @@
 ---
 language: ruby
-bundler_args: --without system_tests development
-script: "bundle install && bundle exec rake validate && bundle exec rake test"
-cache: bundler
-sudo: false
-rvm:
-  - 2.0.0
-  - 2.1.0
-  - 2.2.0
+bundler_args: --without acceptance
+script: "bundle exec rake test SPEC_OPTS='--format documentation'"
 env:
-  - PUPPET_GEM_VERSION="~> 4.2"
-  - PUPPET_GEM_VERSION="~> 4.3"
-  - PUPPET_GEM_VERSION="~> 4.4"
-  - PUPPET_GEM_VERSION="~> 4.5"
-matrix:
-  fast_finish: true
-  exclude:
-  - rvm: 2.0.0
-    env: PUPPET_GEM_VERSION="~> 4.2"
-  - rvm: 2.0.0
-    env: PUPPET_GEM_VERSION="~> 4.3"
-  - rvm: 2.0.0
-    env: PUPPET_GEM_VERSION="~> 4.4"
-  - rvm: 2.0.0
-    env: PUPPET_GEM_VERSION="~> 4.5"
+  - PUPPET_VERSION="~> 4.0.0"
+  - PUPPET_VERSION="~> 4.1.0"
+  - PUPPET_VERSION="~> 4.2.0"
+  - PUPPET_VERSION="~> 4.3.0"
+  - PUPPET_VERSION="~> 4.4.0"
+  - PUPPET_VERSION="~> 4.5.0"
+  - PUPPET_VERSION="~> 4.6.1"
+  - PUPPET_VERSION="~> 4.7.0"
+  - PUPPET_VERSION="~> 4.8.0"
+rvm:
+  - 1.9.3
+  - 2.0
+  - 2.1
+  - 2.2
