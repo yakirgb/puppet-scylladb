@@ -1,29 +1,29 @@
 require 'puppetlabs_spec_helper/rake_tasks'
 require 'puppet-lint/tasks/puppet-lint'
-require 'puppet-syntax/tasks/puppet-syntax'
-require 'metadata-json-lint/rake_task'
+PuppetLint.configuration.send('disable_80chars')
+PuppetLint.configuration.ignore_paths = ["spec/**/*.pp", "pkg/**/*.pp"]
 
-begin
-  require 'puppet_blacksmith/rake_tasks'
-rescue
+desc "Validate manifests, templates, and ruby files"
+task :syntax_validate do
+  Dir['manifests/**/*.pp'].each do |manifest|
+    flags = ENV['FUTURE_PARSER'] == 'yes' ? '--parser future' : ''
+    sh "puppet parser validate  --noop #{flags}  #{manifest}"
+  end
+  Dir['spec/**/*.rb','lib/**/*.rb'].each do |ruby_file|
+    sh "ruby -c #{ruby_file}" unless ruby_file =~ /spec\/fixtures/
+  end
+  Dir['templates/**/*.erb'].each do |template|
+    sh "erb -P -x -T '-' #{template} | ruby -c"
+  end
+  #Validate epp template Checks
+  Dir['templates/**/*.epp'].each do |template|
+    # Although you can use epp with Puppet < 4 + future parser, the epp
+    # subcommand won't be available so we can't actually test these :(
+    unless ENV['FUTURE_PARSER'] == "yes"
+      sh "puppet epp validate  #{template}"
+    end
+  end
+
 end
 
-exclude_paths = [
-  "pkg/**/*",
-  "vendor/**/*",
-  "spec/**/*",
-]
-
-PuppetLint.configuration.log_format = "%{path}:%{linenumber}:%{check}:%{KIND}:%{message}"
-PuppetLint.configuration.send("disable_80chars")
-PuppetLint.configuration.send("disable_quoted_booleans")
-PuppetLint.configuration.ignore_paths = exclude_paths
-PuppetSyntax.exclude_paths = exclude_paths
-
-desc "Run syntax, lint, and spec tests."
-task :test => [
-  :syntax,
-  :lint,
-  :metadata_lint,
-  :spec,
-]
+task :test => [:syntax_validate, :lint, :spec]
