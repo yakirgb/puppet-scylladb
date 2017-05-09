@@ -8,7 +8,12 @@
   "project_page": "https://github.com/yakirgb/puppet-scylladb",
   "issues_url": "https://github.com/yakirgb/puppet-scylladb/issues",
   "description": "Scylla installation and configuration",
-  "dependencies": [],
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": "4.x"
+    }
+  ],
   "tags": [
   "scylla",
   "scylladb"
