@@ -17,7 +17,7 @@ class scylla::params {
   $rpc_address                         = '0.0.0.0'
   $num_tokens                          = 256
   $data_file_directories               = '/var/lib/scylla/data'
-  $commitlog_directory                 = '/var/lib/scylla/data/commitlog'
+  $commitlog_directory                 = '/var/lib/scylla/commitlog'
   $commitlog_sync                      = 'periodic'
   $commitlog_sync_period_in_ms         = 10000
   $commitlog_segment_size_in_mb        = 32
