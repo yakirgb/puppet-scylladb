@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.1.1](https://github.com/yakirgb/puppet-scylladb/tree/0.1.1) (2017-05-10)
+[Full Changelog](https://github.com/yakirgb/puppet-scylladb/compare/0.1.0...0.1.1)
+
 ## [0.1.0](https://github.com/yakirgb/puppet-scylladb/tree/0.1.0) (2017-05-10)
 
 
