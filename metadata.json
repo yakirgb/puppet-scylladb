@@ -1,6 +1,6 @@
 {
   "name": "yakirg-scylladb",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Yakir Gibraltar",
   "summary": "Scylla installation and configuration",
   "license": "MIT",
