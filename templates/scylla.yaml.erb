@@ -73,7 +73,7 @@ seed_provider:
       parameters:
           # seeds is actually a comma-delimited list of addresses.
           # Ex: "<ip1>,<ip2>,<ip3>"
-          - seeds: "<%= @seeds %>"
+          - seeds: "<%= @seeds.join(",") %>"
 
 # Address or interface to bind to and tell other Scylla nodes to connect to.
 # You _must_ change this if you want multiple nodes to be able to communicate!
