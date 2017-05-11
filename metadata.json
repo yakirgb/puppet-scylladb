@@ -14,7 +14,7 @@
       "version_requirement": "4.x"
     },
     {
-      "name": "crayfishx/puppet-firewalld",
+      "name": "crayfishx-firewalld",
       "version_requirement":  ">= 2.2.0 < 3.3.1"
     }
   ],
