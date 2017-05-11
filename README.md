@@ -2,13 +2,14 @@
 
 This role installs and configures ScyllaDB cluster.
 
+
 ## Tested with Travis CI
 
 [![Build Status](https://travis-ci.org/yakirgb/puppet-scylladb.svg?branch=master)](https://travis-ci.org/yakirgb/puppet-scylladb)
 
 ## Requirements
 
-CentOS/RHEL	7.2 and above
+CentOS/RHEL 7.2 and above
 
 ## Documentation
 
