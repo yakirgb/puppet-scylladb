@@ -1,5 +1,16 @@
 # Change Log
 
+## [0.1.2](https://github.com/yakirgb/puppet-scylladb/tree/0.1.2) (2017-05-11)
+[Full Changelog](https://github.com/yakirgb/puppet-scylladb/compare/0.1.1...0.1.2)
+
+**Closed issues:**
+
+- Create firewall manifest [\#1](https://github.com/yakirgb/puppet-scylladb/issues/1)
+
+**Merged pull requests:**
+
+- Create firewall manifest [\#2](https://github.com/yakirgb/puppet-scylladb/pull/2) ([yakirgb](https://github.com/yakirgb))
+
 ## [0.1.1](https://github.com/yakirgb/puppet-scylladb/tree/0.1.1) (2017-05-10)
 [Full Changelog](https://github.com/yakirgb/puppet-scylladb/compare/0.1.0...0.1.1)
 
