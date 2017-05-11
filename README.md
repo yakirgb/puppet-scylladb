@@ -22,8 +22,9 @@ class{ 'scylla':
   dc                        =>  'ScyllaUS',
   rack                      =>  'ScyllaTestRack',
   seeds                     =>  ['192.30.253.113','192.30.253.112'],
+  manage_firewall           =>  false
   scylla_setup_skip_options =>  '--no-raid-setup',
-  scylla_setup_nic_options  =>  '--setup-nic --nic bond0'
+  scylla_setup_nic_options  =>  '--setup-nic --nic bond0'.
 }
 ```
 ## License

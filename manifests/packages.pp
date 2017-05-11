@@ -4,10 +4,6 @@
 #
 class scylla::packages {
 
-  if $caller_module_name != $module_name {
-  fail("Use of private class ${name} by ${caller_module_name}")
-  }
-
   #ABRT conflict with Scylla coredump configuration
   package { 'abrt':
     ensure => absent,

@@ -36,6 +36,7 @@ class scylla (
   $scylla_setup_nic_options             = $scylla::params::scylla_setup_nic_options,
   $jmx_port                             = $scylla::params::jmx_port,
   $node_exporter_port                   = $scylla::params::node_exporter_port,
+  $manage_firewall                      = $scylla::params::manage_firewall,
 
   ) inherits scylla::params {
 
@@ -43,6 +44,7 @@ class scylla (
     ->  class   { '::scylla::repo::yum': }
     ->  class   { '::scylla::packages': }
     ->  class   { '::scylla::config': }
+    ->  class   { '::scylla::firewalld': }
     ->  anchor  { 'scylla::end': }
 
 }
