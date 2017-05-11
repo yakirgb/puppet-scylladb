@@ -1,11 +1,8 @@
 # Puppet ScyllaDB
 
+[![Build Status](https://travis-ci.org/yakirgb/puppet-scylladb.svg?branch=master)](https://travis-ci.org/yakirgb/puppet-scylladb) [![Version](https://img.shields.io/puppetforge/v/yakirg/scylla.svg)](https://forge.puppet.com/yakirg/scylla)
+
 This role installs and configures ScyllaDB cluster.
-
-
-## Tested with Travis CI
-
-[![Build Status](https://travis-ci.org/yakirgb/puppet-scylladb.svg?branch=master)](https://travis-ci.org/yakirgb/puppet-scylladb)
 
 ## Requirements
 
