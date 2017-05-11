@@ -49,4 +49,7 @@ class scylla::params {
   # node_exporter
   $node_exporter_port                  = 9100
 
+  # Manage firewall
+  $manage_firewall                     = true
+
 }

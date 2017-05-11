@@ -1,6 +1,6 @@
 {
   "name": "yakirg-scylla",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Yakir Gibraltar",
   "summary": "Scylla installation and configuration",
   "license": "MIT",
@@ -12,6 +12,10 @@
     {
       "name": "puppetlabs-stdlib",
       "version_requirement": "4.x"
+    },
+    {
+      "name": "crayfishx/puppet-firewalld",
+      "version_requirement":  ">= 2.2.0 < 3.3.1"
     }
   ],
   "tags": [
