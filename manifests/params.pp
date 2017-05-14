@@ -51,5 +51,6 @@ class scylla::params {
 
   # Manage firewall
   $manage_firewall                     = true
+  $firewall_zone_name                  = 'internal'
 
 }

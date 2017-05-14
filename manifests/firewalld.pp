@@ -5,6 +5,7 @@
 class scylla::firewalld {
 
   if $::scylla::manage_firewall {
+
     firewalld::custom_service{'scylla':
       short => 'scylla',
       port  => [
@@ -43,10 +44,10 @@ class scylla::firewalld {
       ]
     }
 
-    -> firewalld_service{ 'Allow scylla access from the internal zone':
+    -> firewalld_service{ "Allow scylla access from the ${::scylla::firewall_zone_name} zone":
       ensure  => 'present',
       service => 'scylla',
-      zone    => 'internal'
+      zone    => $::scylla::firewall_zone_name,
     }
   }
 }

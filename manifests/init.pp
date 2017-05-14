@@ -37,6 +37,8 @@ class scylla (
   $jmx_port                             = $scylla::params::jmx_port,
   $node_exporter_port                   = $scylla::params::node_exporter_port,
   $manage_firewall                      = $scylla::params::manage_firewall,
+  $firewall_zone_name                   = $scylla::params::firewall_zone_name,
+
 
   ) inherits scylla::params {
 
