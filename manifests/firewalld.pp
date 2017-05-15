@@ -6,6 +6,16 @@ class scylla::firewalld {
 
   if $::scylla::manage_firewall {
 
+    if $::scylla::create_firewall_zone {
+      firewalld_zone{ $::scylla::firewall_zone_name:
+        ensure           => present,
+        target           => '%%REJECT%%',
+        interfaces       => $::scylla::firewall_interface,
+        purge_rich_rules => true,
+        purge_services   => true,
+        purge_ports      => true,
+      }
+    }
     firewalld::custom_service{'scylla':
       short => 'scylla',
       port  => [
