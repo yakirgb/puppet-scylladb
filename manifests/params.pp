@@ -51,5 +51,8 @@ class scylla::params {
 
   # Manage firewall
   $manage_firewall                     = true
+  $create_firewall_zone                = false
+  $firewall_zone_name                  = 'restricted'
+  $firewall_interface                  = 'bond0'
 
 }
