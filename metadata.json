@@ -1,6 +1,6 @@
 {
   "name": "yakirg-scylla",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "author": "Yakir Gibraltar",
   "summary": "Scylla installation and configuration",
   "license": "MIT",
@@ -14,26 +14,22 @@
       "version_requirement": "4.x"
     },
     {
-      "name": "crayfishx-firewalld",
-      "version_requirement": ">= 2.2.0 < 3.3.1"
+      "name": "crayfishx/puppet-firewalld",
+      "version_requirement":  ">= 2.2.0 < 3.4.0"
     }
   ],
   "tags": [
-    "scylla",
-    "scylladb"
+  "scylla",
+  "scylladb"
   ],
   "operatingsystem_support": [
     {
-      "operatingsystem": "RedHat",
-      "operatingsystemrelease": [
-        "7"
-      ]
+      "operatingsystem":  "RedHat",
+      "operatingsystemrelease": [ "7" ]
     },
     {
-      "operatingsystem": "CentOS",
-      "operatingsystemrelease": [
-        "7"
-      ]
+      "operatingsystem":  "CentOS",
+      "operatingsystemrelease": [ "7" ]
     }
   ]
 }

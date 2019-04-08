@@ -6,6 +6,7 @@
 class scylla (
   $major_version                        = $scylla::params::major_version,
   $minor_version                        = $scylla::params::minor_version,
+  $release                              = $scylla::params::release,
   $cluster_name                         = $scylla::params::cluster_name,
   $seeds                                = $scylla::params::seeds,
   $listen_address                       = $scylla::params::listen_address,
@@ -13,6 +14,7 @@ class scylla (
   $rpc_address                          = $scylla::params::rpc_address,
   $num_tokens                           = $scylla::params::num_tokens,
   $data_file_directories                = $scylla::params::data_file_directories,
+  $enable_keyspace_column_family_metrics = $scylla::params::enable_keyspace_column_family_metrics,
   $commitlog_directory                  = $scylla::params::commitlog_directory,
   $commitlog_sync                       = $scylla::params::commitlog_sync,
   $commitlog_sync_period_in_ms          = $scylla::params::commitlog_sync_period_in_ms,
@@ -40,6 +42,8 @@ class scylla (
   $create_firewall_zone                 = $scylla::params::create_firewall_zone,
   $firewall_zone_name                   = $scylla::params::firewall_zone_name,
   $firewall_interface                   = $scylla::params::firewall_interface,
+  $auto_snapshot                        = $scylla::params::auto_snapshot,
+  $defragment_memory_on_idle            = $scylla::params::defragment_memory_on_idle,
 
   ) inherits scylla::params {
 

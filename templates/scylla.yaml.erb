@@ -23,6 +23,8 @@ cluster_name: <%= @cluster_name %>
 # multiple tokens per node, see http://wiki.apache.org/cassandra/Operations
 num_tokens: <%= @num_tokens %>
 
+enable_keyspace_column_family_metrics: <%= @enable_keyspace_column_family_metrics %>
+
 # Directory where Scylla should store data on disk.
 # If not set, the default directory is $CASSANDRA_HOME/data/data.
 data_file_directories:
@@ -562,7 +564,7 @@ broadcast_rpc_address: <%= @broadcast_rpc_address %>
 # or dropping of column families. The STRONGLY advised default of true
 # should be used to provide data safety. If you set this flag to false, you will
 # lose data on truncation or drop.
-# auto_snapshot: true
+auto_snapshot:  <%= @auto_snapshot %>
 
 # When executing a scan, within or across a partition, we need to keep the
 # tombstones seen in memory so we can return them to the coordinator, which
@@ -778,7 +780,7 @@ broadcast_rpc_address: <%= @broadcast_rpc_address %>
 # Scylla can perform certain jobs in the background while the system is otherwise idle,
 # freeing processor resources when there is other work to be done.
 #
-# defragment_memory_on_idle: true
+defragment_memory_on_idle: <%= @defragment_memory_on_idle %>
 #
 # prometheus port
 # By default, Scylla opens prometheus API port on port 9180

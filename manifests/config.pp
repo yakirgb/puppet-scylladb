@@ -4,14 +4,6 @@
 #
 class scylla::config inherits ::scylla {
 
-  #Fix https://github.com/scylladb/scylla/issues/2269
-  file { '/usr/lib/scylla/posix_net_conf.sh':
-    ensure => present,
-    source => "puppet:///modules/${module_name}/posix_net_conf.sh",
-    mode   => '0775',
-    before => Exec['scylla_setup']
-  }
-
   exec { 'scylla_setup':
     command => "/usr/sbin/scylla_setup ${scylla::scylla_setup_skip_options} ${scylla::scylla_setup_nic_options}",
     creates => '/var/lib/scylla/.scylla_setup_done',
@@ -37,5 +29,25 @@ class scylla::config inherits ::scylla {
   file { '/etc/scylla/cassandra-rackdc.properties':
     content =>  template("${module_name}/cassandra-rackdc.properties.erb")
   }
+
+  # make scylla logs go into dedicated log as well
+  file{ '/var/log/scylla' :
+    ensure => directory,
+    owner  => 'scylla',
+    group  => 'scylla',
+    mode   => '0755',
+  }
+
+  file { '/etc/rsyslog.d/scylla.conf':
+    content =>  "if \$programname == \"scylla\" then /var/log/scylla/output.log
+& stop"
+  }
+
+  file_line { 'scylla_config':
+    path  => '/usr/lib/systemd/system/scylla-server.service',
+    line  => 'SyslogIdentifier=scylla',
+    after => 'StandardOutput=syslog',
+  }
+
 
 }

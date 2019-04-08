@@ -11,5 +11,5 @@ class scylla::packages {
 
   ->  package { 'epel-release': }
 
-  ->  package { "scylla-${scylla::major_version}.${scylla::minor_version}": }
+  ->  package { "scylla-${scylla::major_version}.${scylla::minor_version}-${scylla::release}": }
 }
