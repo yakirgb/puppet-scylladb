@@ -42,18 +42,18 @@ class scylla::params {
   # cassandra-rackdc.properties
   $dc                                     = 'ScyllaDC'
   $rack                                   = 'ScyllaRack'
-    
-  # Scylla_setup parameters   
+
+  # Scylla_setup parameters
   $scylla_setup_skip_options              = '--no-ntp-setup --no-raid-setup'
   $scylla_setup_nic_options               = '--setup-nic --nic bond0'
-    
-  # Scylla-JMX    
+
+  # Scylla-JMX
   $jmx_port                               = 7199
-    
-  # node_exporter   
+
+  # node_exporter
   $node_exporter_port                     = 9100
-    
-  # Manage firewall   
+
+  # Manage firewall
   $manage_firewall                        = true
   $create_firewall_zone                   = false
   $firewall_zone_name                     = 'restricted'

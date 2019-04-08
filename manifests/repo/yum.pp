@@ -17,13 +17,13 @@ yumrepo { 'scylla':
     enabled  =>  1,
     gpgcheck =>  0,
   }
-  
+
 yumrepo { 'scylladb-scylla-3rdparty':
-    baseurl  =>  "https://copr-be.cloud.fedoraproject.org/results/scylladb/scylla-3rdparty/epel-7-x86_64/",
+    baseurl  =>  'https://copr-be.cloud.fedoraproject.org/results/scylladb/scylla-3rdparty/epel-7-x86_64/',
     descr    =>  'Scylla for Centos $releasever - $basearch',
     enabled  =>  1,
     gpgcheck =>  0,
   }
-  
- 
+
+
 }
