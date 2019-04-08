@@ -10,6 +10,5 @@ gem "puppet-blacksmith"
 
 
 # Changelog generation gems
-gem 'github_changelog_generator', '~> 1.13.0' if RUBY_VERSION < '2.2.2'
 gem 'github_changelog_generator'              if RUBY_VERSION >= '2.2.2'
 gem 'rack', '~> 1.0'                          if RUBY_VERSION < '2.2.2'
