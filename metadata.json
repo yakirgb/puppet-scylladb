@@ -7,7 +7,6 @@
   "source": "https://github.com/yakirgb/puppet-scylladb",
   "project_page": "https://github.com/yakirgb/puppet-scylladb",
   "issues_url": "https://github.com/yakirgb/puppet-scylladb/issues",
-  "description": "Scylla installation and configuration",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
@@ -15,21 +14,35 @@
     },
     {
       "name": "crayfishx/puppet-firewalld",
-      "version_requirement":  ">= 2.2.0 < 3.4.0"
+      "version_requirement": ">= 2.2.0 < 3.4.0"
     }
-  ],
-  "tags": [
-  "scylla",
-  "scylladb"
   ],
   "operatingsystem_support": [
     {
-      "operatingsystem":  "RedHat",
-      "operatingsystemrelease": [ "7" ]
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7"
+      ]
     },
     {
-      "operatingsystem":  "CentOS",
-      "operatingsystemrelease": [ "7" ]
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
     }
-  ]
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "description": "Scylla installation and configuration",
+  "tags": [
+    "scylla",
+    "scylladb"
+  ],
+  "pdk-version": "1.10.0",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git#1.10.0",
+  "template-ref": "1.10.0-0-gbba9ac3"
 }
