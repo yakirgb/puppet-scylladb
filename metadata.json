@@ -1,6 +1,6 @@
 {
   "name": "yakirg-scylla",
-  "version": "0.1.10",
+  "version": "0.1.14",
   "author": "Yakir Gibraltar",
   "summary": "Scylla installation and configuration",
   "license": "MIT",
@@ -9,12 +9,12 @@
   "issues_url": "https://github.com/yakirgb/puppet-scylladb/issues",
   "dependencies": [
     {
-      "name": "puppetlabs-stdlib",
-      "version_requirement": "4.x"
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">=4.25.0 <5.0.0"
     },
     {
-      "name": "puppet-firewalld",
-      "version_requirement": ">= 2.2.0 < 3.4.0"
+      "name": "crayfishx-firewalld",
+      "version_requirement": "3.x"
     }
   ],
   "operatingsystem_support": [
@@ -34,7 +34,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.10.0 < 7.0.0"
+      "version_requirement": ">= 4.4.0 < 6.0.0"
     }
   ],
   "description": "Scylla installation and configuration",
